@@ -84,7 +84,11 @@ that fires the JS event will work!
 <br>  
   
 ### Show event data on screen
-    
+  
+1. To show data from a keypress or any event, add `-key` (for `.key` data)
+2. Your <input> will look like: `<input animate="--myclass-keyup-key">`
+3. The `animate-class` won't change!  
+  
 ```html
 <p> Each letter you type will briefly show up beside the input element. </p>
 
@@ -94,9 +98,13 @@ that fires the JS event will work!
 </div>
 ```
   
+1. The data is now stored inside a CSS variable
+2. It has the same name as the animate attribute: `var(--myclass-keyup-key)`  
+3. Use the CSS feature "pseudo-elements" (`::before`) to show the data on screen
+  
 ```css
 .type p::before {
-  content: var(--spooky-keydown-key);
+  content: var(--type-keydown-key);
 }
 ```
   
