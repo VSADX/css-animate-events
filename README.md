@@ -1,5 +1,7 @@
 # css-animate-events
-
+  
+<br>  
+  
 ## Simple animate element API
 ```html
 <button animate="click"> Click me </button>
